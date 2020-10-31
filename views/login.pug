@@ -1,14 +1,14 @@
 extends ./layout.pug
 block contenido
-    form(action="/users",method="POST")
+    form(action="/users" method="POST")
     div(class="form-group")
         label(for="email") Email
-        input(type="text", name="email", placeholder="Email" class="form-control")
-    div(class="form-group")
-        label(for="password") Password
-        input(type="password", name="password", placeholder="Password" class="form-control")
-    div(class="form-group")
-        label(for="password") Password Confirmation
-        input(type="password", name="password_confirmation", placeholder="Password Confirmation" class="form-control")
+        input(class="form-control", type="text", name="email", placeholder="Email", id="email")
     div
-        input(type="submit" value="Iniciar Sesion" class="btn btn-info")
+        label(for="password") Contraseña
+        input(class="form-control", type="password", name="password", placeholder="Contraseña", id="password")
+    div
+        label(for="password") Confirma Contraseña
+        input(class="form-control", type="password", name="password_confirmation", placeholder="Confirmar Contraseña", id="password_confirmation")
+    div
+        input(type="submit", value="Iniciar Sesion" class="btn btn-info")
