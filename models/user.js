@@ -1,5 +1,5 @@
 const mongoose = require("mongoose"); 
-var Schema = mongoose.Schema; //constructor para crear schemas
+var Schema = mongoose.Schema; 
 
 mongoose.connect("mongodb://localhost:27017/test", 
 {
@@ -9,13 +9,6 @@ mongoose.connect("mongodb://localhost:27017/test",
     useUnifiedTopology: true
 }).then(db => console.log("La Conexion se ha realizado Correctamente!!"))
 .catch(err => console.log("error:", err))
-
-/*var userSchemaJSON = {
-    email: String,
-    password: String
-};
-
-var user_schema = new Schema(userSchemaJSON);*/
 
 var user_schema = new Schema({
     name: String,
